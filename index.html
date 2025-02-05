@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheShield SOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <h1>SheShield SOS</h1>
+            <p>Stay safe with real-time emergency alerts.</p>
+            <button onclick="showPage('contact-page')">Set Emergency Contacts</button>
+            <button onclick="showPage('sos-page')">Go to SOS</button>
+        </div>
+
+        <!-- Contact Form Page -->
+        <div id="contact-page" class="page">
+            <h1>Emergency Contacts</h1>
+            <form id="contact-form">
+                <label for="contact1">Emergency Contact 1:</label>
+                <input type="text" id="contact1" required placeholder="Enter phone number">
+                
+                <label for="contact2">Emergency Contact 2:</label>
+                <input type="text" id="contact2" required placeholder="Enter phone number">
+
+                <button type="submit">Save Contacts</button>
+            </form>
+            <button onclick="showPage('home-page')">Back</button>
+        </div>
+
+        <!-- SOS Page -->
+        <div id="sos-page" class="page">
+            <h1>Emergency SOS</h1>
+            <p id="contacts-display">No contacts saved.</p>
+            <button id="sos-button">Send SOS</button>
+            <div id="response" class="response"></div>
+            <button onclick="showPage('home-page')">Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
